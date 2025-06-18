@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suneast Indonesia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/suneast.png" alt="Logo" />
+    </div>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-item active">Home</a>
+      <a href="#services" class="nav-item">Services</a>
+        <a href="#products" class="nav-item">Products</a>
+      <a href="#about" class="nav-item">About Us</a>
+      <a href="#testimonials" class="nav-item">Testimonials</a>
+      <a href="#projects" class="nav-item">Projects</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <button class="search-btn">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10,2A8,8,0,1,1,2,10,8,8,0,0,1,10,2m0-2a10,10,0,1,0,10,10A10,10,0,0,0,10,0Z"/>
+            <line x1="21" y1="21" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+      <button class="contact-btn">Contact Us</button>
+    </div>
+  </header>
+
+  <!-- home Sections -->
+  <section id="home" class="home-section">
+  <div class="home-container">
+    <div class="home-content" data-aos="fade-right">
+      <h1>Suneast Indonesia – Professional Food Services Supplies</h1>
+      <p>
+        Sun East is a brand of kitchen and bar equipment products. This brand has been distributed in the Indonesian market for more than decade. We considered promoted on a large scale due to its worthy as a reliable product to meet business needs, especially in the food & beverage industry.
+      </p>
+      <div class="home-buttons"  data-aos="zoom-in" data-aos-delay="300">
+        <a href="#services" class="btn btn-primary">Services</a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+    <div class="home-animation">
+      <div class="image-content" data-aos="fade-left">
+        <img src="images/amico.png" />
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Services Section -->
+<section id="services" class="services-section" >
+  <div class="container">
+    <div class="services-content">
+
+      <!-- Left: Image + Title + Button Maps -->
+      <div class="services-left" data-aos="fade-right">
+        <p class="section-subtitle-left">Our Showroom</p>
+        <div class="title-button-wrapper">
+          <h2 class="section-title-left">
+          Galery Product at <strong>Authorized dealer</strong>
+        </h2>
+        <a href="https://maps.google.com" target="_blank" class="map-button">
+          <span>&rarr;</span>
+        </a>
+        </div>
+        <img src="images/dintara.png" class="showroom-image">
+      </div>
+
+      <!-- Right: Service Description -->
+      <div class="services-right" data-aos="fade-left">
+        <p class="section-subtitle-right">Our Service</p>
+        <h2 class="section-title-right"><strong>Services</strong></h2>
+        <p class="section-description">
+          Increasing customer's trust in Sun East products, can not be separated from the role of management who is very concerned with the 4 main pillars of maintaining and strengthening the brand, specifically: The Best Quality, The Best Price, The Best Time, The Best Service.
+        </p>
+        <div class="tag-wrapper">
+          <span class="tag">Kitchen</span>
+          <span class="tag">Chiller</span>
+          <span class="tag">Pawon</span>
+          <span class="tag">Stove</span>
+        </div>
+        <a href="#" class="btn-orange">More Detail</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <section id="products" style="height:100vh;">Products Section</section>
+  <section id="about" style="height:100vh;">About Us Section</section>
+  <section id="testimonials" style="height:100vh;">Testimonials Section</section>
+  <section id="projects" style="height:100vh;">Projects Section</section>
+
+</section>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+  <script src="script.js"></script>
+  <script>
+     // Animasi saat muncul di viewport
+  const sections = document.querySelectorAll('.home-section, .services-section');
+
+  const showSection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target); // hanya muncul sekali
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(showSection, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+  </script>
+  
+</body>
+</html>
