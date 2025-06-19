@@ -184,7 +184,7 @@ html {
 
 .about-content p {
   color: #353535;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -197,7 +197,7 @@ html {
 .about-animation img {
   max-width: 80%;
   height: auto;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 
@@ -236,7 +236,7 @@ html {
 
 .about2-content p {
   color: #353535;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -249,7 +249,7 @@ html {
 .about2-animation img {
   max-width: 80%;
   height: auto;
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 
@@ -264,6 +264,7 @@ html {
   align-items: flex-start;
   max-width: 1200px;
   margin: auto;
+  margin-top: -100px;
   gap: 30px;
 }
 
@@ -288,7 +289,7 @@ html {
 
 .sparepart-content p {
   color: #353535;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -301,4 +302,6 @@ html {
 .sparepart-animation img {
   max-width: 80%;
   height: auto;
+  margin-top: -40px;
+
 }
