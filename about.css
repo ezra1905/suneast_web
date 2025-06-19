@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  opacity: 90%;
+}
+
+.logo,
+.nav-actions {
+  flex: 1;
+
+}
+
+
+.logo img {
+  height: 25px;
+  width: auto;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-links a:hover,
+.nav-links .nav-item.active {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+}
+
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 1;
+}
+
+.search-box {
+  display: flex; 
+  align-items: center;
+  border: 1px hidden #ccc;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+.search-box input {
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+  background: transparent;
+}
+.search-box .search-btn {
+  background: none;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.contact-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  display: inline-block;
+  padding: 7px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.contact-btn:hover {
+  background-color: #c0392b;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.show,
+  .nav-actions.show {
+    display: flex;
+  }
+
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.about-us-section {
+  padding: 80px 30px;
+  background-color: #fff;
+}
+
+.aboutus-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.about-content {
+  flex: 1 1 55%;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 16px;
+  color: #353535;
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
+.about-content h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #353535;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-animation {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.about-animation img {
+  max-width: 80%;
+  height: auto;
+  margin-top: 80px;
+}
+
+
+
+
+
+.aboutus2-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+  padding: 140px 0 240px;
+}
+
+.about2-content {
+  flex: 1 1 55%;
+  text-align: left;
+}
+
+.about2-content h2 {
+  font-size: 16px;
+  color: #353535;
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
+.about2-content h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+.about2-content p {
+  color: #353535;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about2-animation {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.about2-animation img {
+  max-width: 80%;
+  height: auto;
+  margin-top: 120px;
+}
+
+
+
+
+
+
+.sparepart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.sparepart-content {
+  flex: 1 1 55%;
+  text-align: left;
+}
+
+.sparepart-content h2 {
+  font-size: 16px;
+  color: #353535;
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
+.sparepart-content h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+.sparepart-content p {
+  color: #353535;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.sparepart-animation {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.sparepart-animation img {
+  max-width: 80%;
+  height: auto;
+}

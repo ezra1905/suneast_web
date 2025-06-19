@@ -23,7 +23,7 @@
       <a href="#home" class="nav-item active">Home</a>
       <a href="#services" class="nav-item">Services</a>
         <a href="#products" class="nav-item">Products</a>
-      <a href="#about" class="nav-item">About Us</a>
+      <a href="about.html" class="nav-item">About Us</a>
       <a href="#testimonials" class="nav-item">Testimonials</a>
       <a href="#projects" class="nav-item">Projects</a>
     </nav>
@@ -61,6 +61,13 @@
       </div>
     </div>
   </div>
+  
+  <section id="footer-animation" class="footer-animation-section">
+  <div class="footer-animation-container" data-aos="zoom-in">
+    <img src="images/BLENDER.gif" class="animated-gif" />
+  </div>
+</section>
+
 </section>
   <!-- Services Section -->
 <section id="services" class="services-section" >
@@ -100,7 +107,41 @@
     </div>
   </div>
 </section>
-  <section id="products" style="height:100vh;">Products Section</section>
+  <section id="products" class="products-section">
+  <div class="products-header">
+    <p class="products-label">Products</p>
+    <div class="products-title">
+      <h2>Pizza Oven Equipment <i class="fa-solid fa-caret-down"></i></h2>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn left"><span>&larr;</span></button>
+      <button class="carousel-btn right"><span>&rarr;</span></button>
+    </div>
+  </div>
+  <div class="products-carousel">
+  <div class="product-card">
+    <img src="images/Pizza Oven1.png" alt="Pizza Oven 1">
+    <h3>Electric Pizza Oven</h3>
+    <p class="price">Rp 5.000.000</p>
+  </div>
+  <div class="product-card">
+    <img src="images/Pizza Oven2.png" alt="Pizza Oven 2">
+    <h3>Gas Pizza Oven</h3>
+    <p class="price">Rp 6.500.000</p>
+  </div>
+  <div class="product-card">
+    <img src="images/Pizza Oven3.png" alt="Pizza Oven 3">
+    <h3>Double Deck Oven</h3>
+    <p class="price">Rp 9.000.000</p>
+  </div>
+  <div class="product-card">
+    <img src="images/Pizza Oven4.png" alt="Pizza Oven 4">
+    <h3>Stone Pizza Oven</h3>
+    <p class="price">Rp 7.500.000</p>
+  </div>
+</div>
+  <!-- Carousel items will be added below in tahap selanjutnya -->
+</section>
   <section id="about" style="height:100vh;">About Us Section</section>
   <section id="testimonials" style="height:100vh;">Testimonials Section</section>
   <section id="projects" style="height:100vh;">Projects Section</section>
@@ -133,6 +174,18 @@
 
   sections.forEach(section => {
     observer.observe(section);
+  });
+
+   const carousel = document.querySelector('.products-carousel');
+  const btnLeft = document.querySelector('.carousel-btn.left');
+  const btnRight = document.querySelector('.carousel-btn.right');
+
+  btnLeft.addEventListener('click', () => {
+    carousel.scrollBy({ left: -250, behavior: 'smooth' });
+  });
+
+  btnRight.addEventListener('click', () => {
+    carousel.scrollBy({ left: 250, behavior: 'smooth' });
   });
   </script>
   

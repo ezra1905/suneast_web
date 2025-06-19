@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Suneast Indonesia</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="images/suneast.png" alt="Logo" /></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home" class="nav-item">Home</a>
+      <a href="index.html#services" class="nav-item">Services</a>
+      <a href="index.html#products" class="nav-item">Products</a>
+      <a href="about.html" class="nav-item active">About Us</a>
+      <a href="index.html#testimonials" class="nav-item">Testimonials</a>
+      <a href="index.html#projects" class="nav-item">Projects</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <button class="search-btn">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10,2A8,8,0,1,1,2,10,8,8,0,0,1,10,2m0-2a10,10,0,1,0,10,10A10,10,0,0,0,10,0Z"/>
+            <line x1="21" y1="21" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+      <button class="contact-btn">Contact Us</button>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+<section id="aboutus" class="about-us-section">
+  <div class="aboutus-container">
+    <div class="about-content" data-aos="fade-right">
+      <h2>#WhoWeAre</h2>
+      <h1>ABOUT SUN EAST</h1>
+      <p>
+        Sun East is a brand of kitchen and bar equipment products. This brand has been distributed in the Indonesian market for more than decade. We considered promoted on a large scale due to its worthy as a reliable product to meet business needs, especially in the food & beverage industry. Sun East products include hot kitchens, cool kitchens, middle kitchens, chinaware, utility room equipment and many more related to the hospitality business, especially Horeca equipment.
+      </p>
+      <p>
+        Increasing customer's trust in Sun East products, can not be separated from the role of management who is very concerned with the 4 main pillars of maintaining and strengthening the brand, specifically : The Best Quality, The Best Price, The Best Time, The Best Service. The Quality, Research and Development Management at Sun East has thought about many things and for quite a long time about strength, function, risk rules, design, and so on which in principle improve the quality of Sun East’s product it self.
+      </p>
+    </div>
+    <div class="about-animation" data-aos="fade-left">
+      <img src="images/about us.gif" alt="About Us Illustration" />
+    </div>
+  </div>
+ <!-- About Us Section 2 -->
+ <div class="aboutus2-container">
+  <div class="about2-animation" data-aos="fade-left">
+      <img src="images/QA.gif" alt="About Us Illustration" />
+    </div>
+    <div class="about2-content" data-aos="fade-right">
+      <h2>#OurValue</h2>
+      <h1>IMPROVE QUALITY PRODUCT</h1>
+      <p>
+        Sun East management efforts to improve the quality of the products produced, one of which is doing OBM (Original Brand Manufactured) in collaboration among factories with international standards, especially in China. The Sun East Cooking Range’s factory in China stands on an area of 10,000 m2 and products cool storage, cool display, premium bakery and so on are standing on an area of more than 400,000 m2, using the services of more than 2,000 human resources. Continue improvement of management on research innovations for Sun East products supported by high-tech production machines and mass production capacities, so they could meet all of customer demands on time. 
+      </p>
+      <p>
+        The Best Price, Sun East management is very concerned with production costs and also other supporting costs, ranging from material costs, handling and so on which can reduce the production budget without compromising the quality of the product itself. Collaborating with various forwarders throughout Indonesia, especially on the island of Java, opening many cooperative relationships with local transportation in order to facilitate handling between cities both in Indonesia and abroad where these Sun East products are produced. Finalize various administrations, start from licensing in order to be able to expedite the import process as well as many other administrations that simplify the bureaucracy. It could reduce the costs more effectively and have an impact on the best price.
+      </p>
+    </div>
+  </div>
+  <!-- Sparepart Section -->
+   <div class="sparepart-container">
+    <div class="sparepart-content" data-aos="fade-right">
+      <h2>#Sparepart</h2>
+      <h1>AFTER SALES</h1>
+      <p>
+        ATMSS is official Sun East Indonesia’s business partner to handle all customer complaints, both maintenance, service and after-sales spare part services. Based on the 4 important things above, the management is brave with high confidence to show up the Sun East brand in Indonesia, because it is considered worthy to move forward as a trademark that could compete to serve the demands of hospitality business, especially in the food and beverage business. 
+      </p>
+    </div>
+    <div class="sparepart-animation" data-aos="fade-left">
+      <img src="images/sparepart.gif" alt="About Us Illustration" />
+    </div>
+  </div>
+
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const navActions = document.querySelector(".nav-actions");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      navActions.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
