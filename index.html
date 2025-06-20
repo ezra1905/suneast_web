@@ -50,7 +50,7 @@
       <p>
         Sun East is a brand of kitchen and bar equipment products. This brand has been distributed in the Indonesian market for more than decade. We considered promoted on a large scale due to its worthy as a reliable product to meet business needs, especially in the food & beverage industry.
       </p>
-      <div class="home-buttons"  data-aos="zoom-in" data-aos-delay="300">
+      <div class="home-buttons"  data-aos="fade-right">
         <a href="#services" class="btn btn-primary">Services</a>
         <a href="#contact" class="btn btn-secondary">Contact Us</a>
       </div>
@@ -155,39 +155,5 @@
   });
 </script>
   <script src="script.js"></script>
-  <script>
-     // Animasi saat muncul di viewport
-  const sections = document.querySelectorAll('.home-section, .services-section');
-
-  const showSection = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-        observer.unobserve(entry.target); // hanya muncul sekali
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(showSection, {
-    threshold: 0.1
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-
-   const carousel = document.querySelector('.products-carousel');
-  const btnLeft = document.querySelector('.carousel-btn.left');
-  const btnRight = document.querySelector('.carousel-btn.right');
-
-  btnLeft.addEventListener('click', () => {
-    carousel.scrollBy({ left: -250, behavior: 'smooth' });
-  });
-
-  btnRight.addEventListener('click', () => {
-    carousel.scrollBy({ left: 250, behavior: 'smooth' });
-  });
-  </script>
-  
 </body>
 </html>
